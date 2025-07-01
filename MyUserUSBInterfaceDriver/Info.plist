@@ -31,19 +31,18 @@
 			<key>IOUserClass</key>
 			<string>MyUserUSBInterfaceDriver</string>
 			<key>IOUserServerName</key>
-			<string>sc.knight.MyUserUSBInterfaceDriver</string>
-            <key>bConfigurationValue</key>
-            <integer>0x1</integer>
-            <key>bInterfaceNumber</key>
-            <integer>0x0</integer>
-            <!-- Change this to your own device. This is a Sandisk Cruzer USB driver -->
-            <key>idVendor</key>
-            <integer>0x781</integer>
-            <key>idProduct</key>
-            <integer>0x5530</integer>
+			<string>com.0x384c0.mac.driver.test</string>
+			<key>bConfigurationValue</key>
+			<integer>1</integer>
+			<key>bInterfaceNumber</key>
+			<integer>0</integer>
+			<key>idProduct</key>
+			<string>*</string>
+			<key>idVendor</key>
+			<string>*</string>
 		</dict>
 	</dict>
-    <key>OSBundleUsageDescription</key>
-    <string>Example user space USB driver</string>
+	<key>OSBundleUsageDescription</key>
+	<string>Example user space USB driver</string>
 </dict>
 </plist>

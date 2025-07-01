@@ -15,14 +15,14 @@ class ExtensionManager : NSObject, OSSystemExtensionRequestDelegate {
     static let shared = ExtensionManager()
     
     func activate() {
-        let activationRequest = OSSystemExtensionRequest.activationRequest(forExtensionWithIdentifier: "sc.knight.MyUserUSBInterfaceDriver", queue: .main)
+        let activationRequest = OSSystemExtensionRequest.activationRequest(forExtensionWithIdentifier: "com.0x384c0.mac.driver.test", queue: .main)
         activationRequest.delegate = self
         OSSystemExtensionManager.shared.submitRequest(activationRequest)
     }
     
     func deactivate() {
         // This doesn't seem to work in b1 not sure why
-        let activationRequest = OSSystemExtensionRequest.deactivationRequest(forExtensionWithIdentifier: "sc.knight.MyUserUSBInterfaceDriver", queue: .main)
+        let activationRequest = OSSystemExtensionRequest.deactivationRequest(forExtensionWithIdentifier: "com.0x384c0.mac.driver.test", queue: .main)
         activationRequest.delegate = self
         OSSystemExtensionManager.shared.submitRequest(activationRequest)
     }

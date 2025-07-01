@@ -5,6 +5,11 @@
 	<key>com.apple.developer.driverkit</key>
 	<true/>
 	<key>com.apple.developer.driverkit.transport.usb</key>
-	<true/>
+	<array>
+		<dict>
+			<key>idVendor</key>
+			<string>*</string>
+		</dict>
+	</array>
 </dict>
 </plist>

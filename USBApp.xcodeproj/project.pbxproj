@@ -15,7 +15,7 @@
 		6F55577022B2C52C00139F6B /* DriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F55576F22B2C52C00139F6B /* DriverKit.framework */; };
 		6F55577322B2C52C00139F6B /* MyUserUSBInterfaceDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6F55577222B2C52C00139F6B /* MyUserUSBInterfaceDriver.cpp */; };
 		6F55577522B2C52C00139F6B /* MyUserUSBInterfaceDriver.iig in Sources */ = {isa = PBXBuildFile; fileRef = 6F55577422B2C52C00139F6B /* MyUserUSBInterfaceDriver.iig */; };
-		6F55577A22B2C52C00139F6B /* sc.knight.MyUserUSBInterfaceDriver.dext in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 6F55576D22B2C52C00139F6B /* sc.knight.MyUserUSBInterfaceDriver.dext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6F55577A22B2C52C00139F6B /* com.0x384c0.mac.driver.test.dext in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 6F55576D22B2C52C00139F6B /* com.0x384c0.mac.driver.test.dext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6F55578022B2C54300139F6B /* USBDriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F55577F22B2C54300139F6B /* USBDriverKit.framework */; };
 		6F55578522B2D42900139F6B /* ExtensionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F55578422B2D42900139F6B /* ExtensionManager.swift */; };
 /* End PBXBuildFile section */
@@ -37,7 +37,7 @@
 			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
 			dstSubfolderSpec = 16;
 			files = (
-				6F55577A22B2C52C00139F6B /* sc.knight.MyUserUSBInterfaceDriver.dext in Embed System Extensions */,
+				6F55577A22B2C52C00139F6B /* com.0x384c0.mac.driver.test.dext in Embed System Extensions */,
 			);
 			name = "Embed System Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,7 +63,7 @@
 		6F55575F22B2C4DB00139F6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6F55576122B2C4DB00139F6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F55576222B2C4DB00139F6B /* USBApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = USBApp.entitlements; sourceTree = "<group>"; };
-		6F55576D22B2C52C00139F6B /* sc.knight.MyUserUSBInterfaceDriver.dext */ = {isa = PBXFileReference; explicitFileType = "wrapper.driver-extension"; includeInIndex = 0; path = sc.knight.MyUserUSBInterfaceDriver.dext; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F55576D22B2C52C00139F6B /* com.0x384c0.mac.driver.test.dext */ = {isa = PBXFileReference; explicitFileType = "wrapper.driver-extension"; includeInIndex = 0; path = com.0x384c0.mac.driver.test.dext; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F55576F22B2C52C00139F6B /* DriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DriverKit.framework; path = System/Library/Frameworks/DriverKit.framework; sourceTree = SDKROOT; };
 		6F55577222B2C52C00139F6B /* MyUserUSBInterfaceDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyUserUSBInterfaceDriver.cpp; sourceTree = "<group>"; };
 		6F55577422B2C52C00139F6B /* MyUserUSBInterfaceDriver.iig */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.iig; path = MyUserUSBInterfaceDriver.iig; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				6F55575222B2C4D900139F6B /* USBApp.app */,
-				6F55576D22B2C52C00139F6B /* sc.knight.MyUserUSBInterfaceDriver.dext */,
+				6F55576D22B2C52C00139F6B /* com.0x384c0.mac.driver.test.dext */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,7 +203,7 @@
 			);
 			name = MyUserUSBInterfaceDriver;
 			productName = MyUserUSBInterfaceDriver;
-			productReference = 6F55576D22B2C52C00139F6B /* sc.knight.MyUserUSBInterfaceDriver.dext */;
+			productReference = 6F55576D22B2C52C00139F6B /* com.0x384c0.mac.driver.test.dext */;
 			productType = "com.apple.product-type.driver-extension";
 		};
 /* End PBXNativeTarget section */
@@ -423,18 +423,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = USBApp/USBApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "USBApp/Preview\\ Content";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = AW8RFH6CD4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = USBApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sc.knight.USBApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.0x384c0.mac.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -444,18 +446,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = USBApp/USBApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "USBApp/Preview\\ Content";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = AW8RFH6CD4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = USBApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sc.knight.USBApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.0x384c0.mac.driver.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -465,16 +469,18 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = MyUserUSBInterfaceDriver/MyUserUSBInterfaceDriver.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = AW8RFH6CD4;
 				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)/System/DriverKit/System/Library/Frameworks",
 				);
 				INFOPLIST_FILE = MyUserUSBInterfaceDriver/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = sc.knight.MyUserUSBInterfaceDriver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.0x384c0.mac.driver.test;
 				PRODUCT_NAME = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = driverkit;
 				SKIP_INSTALL = YES;
 			};
@@ -485,6 +491,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = MyUserUSBInterfaceDriver/MyUserUSBInterfaceDriver.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
@@ -493,8 +500,9 @@
 					"$(SDKROOT)/System/DriverKit/System/Library/Frameworks",
 				);
 				INFOPLIST_FILE = MyUserUSBInterfaceDriver/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = sc.knight.MyUserUSBInterfaceDriver;
+				PRODUCT_BUNDLE_IDENTIFIER = com.0x384c0.mac.driver.test;
 				PRODUCT_NAME = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = driverkit;
 				SKIP_INSTALL = YES;
 			};
